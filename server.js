@@ -26,6 +26,11 @@ connectDB();
 // API Routes
 app.use('/api/auth/authproj', require('./routes/user'));
 
+app.get('/', (req, res) => {
+    res.send('API is running! 🚀');
+});
+
+
 // Generic Error Handling
 app.use((err, req, res, next) => {
     console.error(err.message || err);  // Log error
